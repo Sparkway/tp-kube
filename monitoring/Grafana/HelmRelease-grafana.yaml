@@ -35,7 +35,7 @@ spec:
             orgId: 1
             url: http://vmlogs-victoria-logs-single-server.victorialogs.svc.cluster.local:9428
             access: proxy
-            isDefault: true
+            isDefault: false
             updateIntervalSeconds: 10
             editable: true
 
