@@ -7,7 +7,7 @@ spec:
   interval: 1m
   chart:
     spec:
-      chart: vm/victoria-metrics-single
+      chart: victoria-metrics-single
       sourceRef:
         kind: HelmRepository
         name: victoriametrics
