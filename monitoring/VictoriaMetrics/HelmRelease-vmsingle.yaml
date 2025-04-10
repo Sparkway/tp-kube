@@ -4,8 +4,6 @@ metadata:
   name: vmsingle
   namespace: victoriametrics
 spec:
-  nodeSelector:
-    kubernetes.io/hostname: k3s-mntr-*
   interval: 1m
   chart:
     spec:
