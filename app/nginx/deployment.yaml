@@ -7,7 +7,7 @@ metadata:
   namespace: nginx
 spec:
   nodeSelector:
-    kubernetes.io/hostname: k3s-mntr-*
+    kubernetes.io/hostname: k3s-app-*
   replicas: 3
   selector:
     matchLabels:
