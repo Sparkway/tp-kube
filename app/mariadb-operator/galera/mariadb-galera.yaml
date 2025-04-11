@@ -19,9 +19,9 @@ spec:
   resources:
     requests:
       cpu: 1
-      memory: 4Gi
+      memory: 2Gi
     limits:
-      memory: 4Gi
+      memory: 2Gi
 
   # innodb_buffer_pool_size = 80% de la mémoire allouée
   myCnf: |
@@ -30,7 +30,7 @@ spec:
     default_storage_engine=InnoDB
     binlog_format=row
     innodb_autoinc_lock_mode=2
-    innodb_buffer_pool_size=3200MB
+    innodb_buffer_pool_size=1600MB
     max_allowed_packet=1GB
 
 
