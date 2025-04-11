@@ -1,0 +1,67 @@
+apiVersion: k8s.mariadb.com/v1alpha1
+kind: MariaDB
+metadata:
+  name: mariadb-galera
+  namespace: mariadb
+spec:
+  username: test
+  passwordSecretKeyRef:
+    name: test-password
+    key: password
+  rootPasswordSecretKeyRef:
+    name: root-password
+    key: password   
+  database: test
+
+  updateStrategy:
+    type: ReplicasFirstPrimaryLast
+
+  resources:
+    requests:
+      cpu: 1
+      memory: 4Gi
+    limits:
+      memory: 4Gi
+
+  # innodb_buffer_pool_size = 80% de la mémoire allouée
+  myCnf: |
+    [mariadb]
+    bind-address=*
+    default_storage_engine=InnoDB
+    binlog_format=row
+    innodb_autoinc_lock_mode=2
+    innodb_buffer_pool_size=3200MB
+    max_allowed_packet=1GB
+
+
+  storage:
+    size: 5Gi
+
+  maxScale:
+    enabled: true
+
+  replicas: 3
+  galera:
+    enabled: true
+
+  metrics:
+    enabled: true
+
+  affinity:
+    antiAffinityEnabled: true
+
+  podDisruptionBudget:
+    maxUnavailable: 66%
+
+  priorityClassName: system-node-critical
+
+  livenessProbe:
+    initialDelaySeconds: 20
+    periodSeconds: 5
+    timeoutSeconds: 5
+  
+  readinessProbe:
+    initialDelaySeconds: 20
+    periodSeconds: 5
+    timeoutSeconds: 5
+
