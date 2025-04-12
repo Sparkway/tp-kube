@@ -6,6 +6,7 @@ metadata:
 spec:
   mariaDbRef:
     name: mariadb-galera
+    namespace: mariadb
   passwordSecretKeyRef:
     name: wordpress-password
     key: password
