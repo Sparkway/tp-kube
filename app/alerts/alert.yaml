@@ -4,7 +4,6 @@ metadata:
   name: alert
   namespace: alerts
 spec:
-  summary: "cluster addons"
   eventMetadata:
     cluster: "app"
   providerRef:
