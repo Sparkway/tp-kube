@@ -13,11 +13,10 @@ metadata:
   namespace: flux-system
 spec:
   ports:
-  - name: http
+  - name: http-prom
     port: 8080
     protocol: TCP
     targetPort: 8080
   selector:
     app: source-controller
-  sessionAffinity: None
   type: ClusterIP
