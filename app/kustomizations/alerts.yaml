@@ -15,3 +15,7 @@ spec:
   timeout: 3m
   dependsOn:
     - name: sealed-secrets
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
