@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m0s
-  path: ./app
+  path: ./app/alerts
   prune: true
   sourceRef:
     kind: GitRepository
