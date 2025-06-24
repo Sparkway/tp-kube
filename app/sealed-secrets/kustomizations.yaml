@@ -1,0 +1,24 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: sealed-secrets-kustomization
+resources:
+  - HelmRelease-sealed-secrets.yaml
+  - HelmRepository.yaml
+  - namespace.yaml
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: sealed-secrets
+  namespace: flux-system
+spec:
+  interval: 5m0s
+  path: .
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  targetNamespace: sealed-secrets
+  wait: true
+  timeout: 3m
