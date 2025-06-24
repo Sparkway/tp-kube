@@ -3,7 +3,4 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
-- ../kustomizations/sealed-secrets.yaml
-- ../kustomizations/alerts.yaml
-- ../kustomizations/mariadb-operator.yaml
-- ../kustomizations/galera.yaml
+- ../kustomizations
