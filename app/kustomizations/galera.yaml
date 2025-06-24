@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m0s
-  path: "./app/mariadb-operator/galera"
+  path: "./app/galera"
   prune: true
   sourceRef:
     kind: GitRepository
