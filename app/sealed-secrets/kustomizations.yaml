@@ -1,11 +1,3 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-metadata:
-  name: sealed-secrets-kustomization
-resources:
-  - HelmRelease-sealed-secrets.yaml
-  - HelmRepository.yaml
-  - namespace.yaml
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -14,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m0s
-  path: .
+  path: "/app/sealed-secrets"
   prune: true
   sourceRef:
     kind: GitRepository
