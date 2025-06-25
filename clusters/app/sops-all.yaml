@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - flux-system # this must be included otherwise Flux will delete itself
-  - sops.yaml
+  - alerts.yaml
   - galera.yaml
   - mariadb-operator.yaml
 patches:
@@ -15,7 +15,7 @@ patches:
           decryption:
             provider: sops
             secretRef:
-              name: sops-key
+              name: sops-age
     target:
       kind: Kustomization
       labelSelector: app.kubernetes.io/sops=enabled
