@@ -27,7 +27,13 @@ spec:
                 - targets: [ "localhost:8428" ]
             - job_name: victorialogs
               static_configs:
-                - targets: [ "vmlogs-victoria-logs-single-server.victorialogs.svc.cluster.local:9428/metrics" ]
+                - targets: [ "vmlogs-victoria-logs-single-server.victorialogs.svc.cluster.local:9428/metrics" ]            
+            - job_name: node-exporter
+              static_configs:
+                - targets: [ "node-exporter-prometheus-node-exporter.node-exporter.svc.cluster.local:9100/metrics" ]
+            - job_name: kube-state-metrics
+              static_configs:
+                - targets: [ "kube-state-metrics.kube-state-metrics.svc.cluster.local:8080/metrics" ]
             - job_name: "kubernetes-apiservers"
               kubernetes_sd_configs:
                 - role: endpoints
