@@ -25,6 +25,9 @@ spec:
             - job_name: victoriametrics
               static_configs:
                 - targets: [ "localhost:8428" ]
+            - job_name: victorialogs
+              static_configs:
+                - targets: [ "vmlogs-victoria-logs-single-server.victorialogs.svc.cluster.local:9428/metrics" ]
             - job_name: "kubernetes-apiservers"
               kubernetes_sd_configs:
                 - role: endpoints
