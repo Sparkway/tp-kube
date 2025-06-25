@@ -1,0 +1,24 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: sops-all
+resources:
+  - flux-system # this must be included otherwise Flux will delete itself
+  - grafana.yaml
+  - victorialogs.yaml
+  - victoriametrics.yaml
+  - flux-metrics.yaml
+patches:
+  - patch: |
+        apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+        kind: Kustomization
+        metadata:
+          name: all
+        spec: 
+          decryption:
+            provider: sops
+            secretRef:
+              name: sops-age
+    target:
+      kind: Kustomization
+      labelSelector: app.kubernetes.io/sops=enabled
