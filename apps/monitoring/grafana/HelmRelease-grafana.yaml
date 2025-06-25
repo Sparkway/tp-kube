@@ -66,3 +66,15 @@ spec:
           gnetId: 22084
           revision: 5
           datasources: victoriametrics
+        victorialogs_explorer:
+          gnetId: 22759
+          revision: 6
+          datasource: victoriametrics
+        k8s_cluster_summary:
+          gnetId: 8685
+          revision: 1
+          datasource: victoriametrics
+        k8s_dashboard:
+          gnetId: 15661
+          revision: 2
+          datasources: victoriametrics
