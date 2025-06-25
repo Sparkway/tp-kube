@@ -8,6 +8,8 @@ resources:
   - victorialogs.yaml
   - victoriametrics.yaml
   - flux-metrics.yaml
+  - kube-state-metrics.yaml
+  - node-exporter.yaml
 patches:
   - patch: |
         apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
