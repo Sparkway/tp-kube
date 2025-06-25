@@ -62,3 +62,7 @@ spec:
           gnetId: 14205
           revision: 1
           datasource: victoriametrics
+        victorialogs:
+          gnetId: 22084
+          revision: 5
+          datasources: victoriametrics
