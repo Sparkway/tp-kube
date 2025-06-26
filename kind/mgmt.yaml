@@ -11,4 +11,3 @@ nodes:
     extraMounts:
       - hostPath: /var/run/docker.sock
         containerPath: /var/run/docker.sock
-  - role: worker
