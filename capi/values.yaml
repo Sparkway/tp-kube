@@ -1,0 +1,11 @@
+network:
+  podCidr: 10.45.0.0/16
+  svcDomain: cluster.local
+  svcCidr: 10.55.0.0/16
+
+replicas:
+  cp: 1
+  worker: 1
+
+kubernetes:
+  version: v.1.33.0
