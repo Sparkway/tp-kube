@@ -21,5 +21,7 @@ spec:
       featureGates:
         core:
           ClusterTopology: true
+        kubeadm:
+          ClusterTopology: true
         docker:
           ClusterTopology: true
