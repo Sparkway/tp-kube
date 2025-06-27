@@ -17,6 +17,7 @@ spec:
     infrastructure:
       docker:
         namespace: capi
+        createNamespace: false
     manager:
       featureGates:
         docker:
