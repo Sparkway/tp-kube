@@ -15,7 +15,8 @@ spec:
       interval: 1m
   values:
     infrastructure:
-      docker: {}
+      docker:
+        createNamespace: true
     manager:
       featureGates:
         docker:
