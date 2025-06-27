@@ -15,9 +15,7 @@ spec:
       interval: 1m
   values:
     infrastructure:
-      docker:
-        namespace: capi
-        createNamespace: false
+      docker: {}
     manager:
       featureGates:
         docker:
