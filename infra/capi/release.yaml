@@ -21,7 +21,10 @@ spec:
       featureGates:
         core:
           ClusterTopology: true
+          MachinePool: true
         kubeadm:
           ClusterTopology: true
+          MachinePool: true
         docker:
           ClusterTopology: true
+          MachinePool: true
