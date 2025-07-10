@@ -17,7 +17,7 @@ spec:
       cidrBlocks:
       - {{ .network.svcCidr }}
   topology:
-    class: quick-start
+    class: default/quick-start
     controlPlane:
       metadata: {}
       replicas: {{ .replicas.cp }}
