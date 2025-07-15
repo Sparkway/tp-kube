@@ -14,3 +14,5 @@ spec:
   kubeConfig:
     secretRef:
       name: monitoring-kubeconfig
+  dependsOn:
+    - name: clusterclass
