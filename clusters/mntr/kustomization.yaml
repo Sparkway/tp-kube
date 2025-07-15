@@ -10,7 +10,6 @@ resources:
   - flux-metrics.yaml
   - kube-state-metrics.yaml
   - node-exporter.yaml
-  - cilium.yaml
 patches:
   - patch: |
         apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
@@ -25,8 +24,3 @@ patches:
     target:
       kind: Kustomization
       labelSelector: app.kubernetes.io/sops=enabled
-
-  - path: patch-cilium.yaml
-    target:
-        kind: HelmRelease
-        name: cilium-release
