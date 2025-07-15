@@ -7,6 +7,8 @@ metadata:
   {{- /* Le nom vient de l'objet courant dans la boucle */}}
   name: {{ .name }}
   namespace: {{ .name }}
+  labels:
+    cilium: enabled
 spec:
   clusterNetwork:
     pods:
