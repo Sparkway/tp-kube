@@ -19,12 +19,13 @@ spec:
         createNamespace: true
     manager:
       featureGates:
-        core:
-          ClusterTopology: true
-          MachinePool: true
-        kubeadm:
-          ClusterTopology: true
-          MachinePool: true
-        docker:
-          ClusterTopology: true
-          MachinePool: true
+        CLUSTER_TOPOLOGY: true
+        # core:
+        #   ClusterTopology: true
+        #   MachinePool: true
+        # kubeadm:
+        #   ClusterTopology: true
+        #   MachinePool: true
+        # docker:
+        #   ClusterTopology: true
+        #   MachinePool: true
