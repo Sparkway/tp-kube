@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: cert-manager-repo
-        namespace: capi
+        namespace: capi-system
   interval: 1m0s
   values:
     crds:
