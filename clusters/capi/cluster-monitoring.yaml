@@ -13,3 +13,4 @@ spec:
   kubeConfig:
     secretRef:
       name: monitoring-kubeconfig
+      namespace: monitoring
