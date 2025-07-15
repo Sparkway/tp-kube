@@ -6,6 +6,9 @@ metadata:
 spec:
   interval: 5m
   path: "./clusters/mntr"
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
   prune: true
   kubeConfig:
     secretRef:
