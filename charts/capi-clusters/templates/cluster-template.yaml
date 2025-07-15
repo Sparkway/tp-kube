@@ -6,7 +6,7 @@ kind: Cluster
 metadata:
   {{- /* Le nom vient de l'objet courant dans la boucle */}}
   name: {{ .name }}
-  # namespace: {{ .name }}
+  namespace: default
   labels:
     cilium: enabled
 spec:
