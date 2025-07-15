@@ -10,6 +10,7 @@ resources:
   - flux-metrics.yaml
   - kube-state-metrics.yaml
   - node-exporter.yaml
+  - cilium.yaml
 patches:
   - patch: |
         apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
