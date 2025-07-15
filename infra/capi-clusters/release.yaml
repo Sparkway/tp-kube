@@ -12,3 +12,26 @@ spec:
         name: capi-clusters-repo
         namespace: capi-system
   interval: 1m
+  values:
+    clusters:
+      - name: cluster-prod-1
+        kubernetes:
+          version: "v1.33.0"
+        replicas:
+          cp: 1
+          worker: 1
+        network:
+          podCidr: "10.100.0.0/16"
+          svcDomain: "cluster.local"
+          svcCidr: "10.110.0.0/16"
+
+      - name: cluster-staging-1
+        kubernetes:
+          version: "v1.33.0"
+        replicas:
+          cp: 1
+          worker: 1
+        network:
+          podCidr: "10.200.0.0/16"
+          svcDomain: "cluster.local"
+          svcCidr: "10.210.0.0/16"
