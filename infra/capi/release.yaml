@@ -19,7 +19,8 @@ spec:
         createNamespace: true
     manager:
       featureGates:
-        CLUSTER_TOPOLOGY: true
+        # MachinePool: true
+        ClusterTopology: true
         # core:
         #   ClusterTopology: true
         #   MachinePool: true
