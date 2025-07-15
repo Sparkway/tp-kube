@@ -17,7 +17,8 @@ spec:
       cidrBlocks:
       - {{ .network.svcCidr }}
   topology:
-    class: quick-start.default.clusterclasses.cluster.x-k8s.io.cluster.local
+    class: quick-start
+    classNamespace : default
     controlPlane:
       metadata: {}
       replicas: {{ .replicas.cp }}
