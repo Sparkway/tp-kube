@@ -24,3 +24,8 @@ patches:
     target:
       kind: Kustomization
       labelSelector: app.kubernetes.io/sops=enabled
+
+  - path: cilium-patch.yaml
+    target:
+        kind: HelmRelease
+        name: cilium-release
