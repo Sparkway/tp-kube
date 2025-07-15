@@ -16,3 +16,4 @@ spec:
       name: monitoring-kubeconfig
   dependsOn:
     - name: clusterclass
+      namespace: flux-system
