@@ -8,7 +8,7 @@ metadata:
   name: {{ .name }}
   namespace: default
   labels:
-    cilium: enabled
+    calico: enabled
 spec:
   clusterNetwork:
     pods:
