@@ -2,15 +2,15 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: cluster-monitoring
-  namespace: flux-system
+  namespace: monitoring
 spec:
   interval: 5m
   path: "./clusters/mntr"
   sourceRef:
     kind: GitRepository
     name: flux-system
+    namespace: flux-system
   prune: true
   kubeConfig:
     secretRef:
       name: monitoring-kubeconfig
-      namespace: monitoring
