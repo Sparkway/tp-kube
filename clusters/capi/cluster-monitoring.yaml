@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   interval: 5m
-  path: "./clusters/mntr"
+  path: "./apps/monitoring"
   sourceRef:
     kind: GitRepository
     name: flux-system
