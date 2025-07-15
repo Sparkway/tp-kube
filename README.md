@@ -27,7 +27,7 @@ kind create cluster --config kind/capi.yaml
 
 Déployer CAPD :
 ```bash
-CLUSTER_TOPOLOGY=true clusterctl init --infrastructure docker
+CLUSTER_TOPOLOGY=true clusterctl init --infrastructure docker --addon helm
 ```
 
 Installer FluxCD sur le cluster :

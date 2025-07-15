@@ -1,11 +1,9 @@
-apiVersion: helm.toolkit.fluxcd.io/v2
-kind: HelmRelease
+apiVersion: addons.cluster.x-k8s.io/v1alpha1
+kind: HelmChartProxy
 metadata:
-  name: cilium-release
-  namespace: cilium
+  name: cilium
 spec:
-  values:
+  valuesTemplate: |
     ipam:
       operator:
-        clusterPoolIPv4PodCIDRList: "10.0.0.0/16"
-
+        clusterPoolIPv4PodCIDRList: "10.1.0.0/16"
