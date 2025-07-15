@@ -1,0 +1,15 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: capi-clusters-repo
+  namespace: capi-system
+spec:
+  interval: 1m
+  url: https://github.com/Sparkway/tp-kube
+  ref:
+    branch: main
+  ignore: |
+    # exclude all
+    /*
+    # include charts directory
+    !/charts/    
