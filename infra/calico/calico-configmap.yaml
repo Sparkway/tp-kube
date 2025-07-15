@@ -1,7 +1,4 @@
 apiVersion: v1
-metadata:
-  name: calico-configmap
-  namespace: default
 data:
   calico.yaml: |
     ---
@@ -10217,3 +10214,4 @@ kind: ConfigMap
 metadata:
   creationTimestamp: null
   name: calico-configmap
+  namespace: default
