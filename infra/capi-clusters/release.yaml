@@ -25,7 +25,7 @@ spec:
           svcDomain: "cluster.local"
           svcCidr: "10.10.0.0/16"
 
-      - name: app1
+      - name: app
         kubernetes:
           version: "v1.33.0"
         replicas:
@@ -36,7 +36,7 @@ spec:
           svcDomain: "cluster.local"
           svcCidr: "10.110.0.0/16"
 
-      - name: app2
+      - name: nginx
         kubernetes:
           version: "v1.33.0"
         replicas:
